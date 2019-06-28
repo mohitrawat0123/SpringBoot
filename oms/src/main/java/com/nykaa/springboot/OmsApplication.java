@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class OmsApplication {
 
 	public static void main(String[] args) {
+		//comment
 		SpringApplication.run(OmsApplication.class, args);
 	}
 
