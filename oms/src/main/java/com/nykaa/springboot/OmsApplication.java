@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class OmsApplication {
 
 	public static void main(String[] args) {
-		//in branch1
+		//branch1
 		SpringApplication.run(OmsApplication.class, args);
 	}
 
