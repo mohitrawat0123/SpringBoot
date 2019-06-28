@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Orders</title>
+</head>
+<body>
+<p>
+	<h2>Order Details for: <h3 th:text="${userName}">Text...</h3></h2>
+</p>
+<div id="tabel">
+	<table>
+     <tr><td>Your Orders</td></tr>
+		<th:block th:each="map : ${hm}">
+ 		  <tr>
+ 		  <td>Order ID :</td> <td th:text="${map.key}">Order ID</td>
+  			
+    		
+    		<table border="1">
+		<tr>
+			<th>Product ID</th>
+			<th>Description</th>
+			<th>Price(INR)</th>
+		</tr>
+		<th:block th:each="product : ${map.value}">
+		<tr >
+        	<td th:text="${product.pid}">1</td>
+       		<td><a href="#" th:text="${product.des}">Title ...</a></td>
+        	<td th:text="${product.price}">Text ...
+        	</td>
+    	</tr>
+    	</th:block>
+	</table>	
+    			
+    	</tr>
+    			
+  			</th:block>
+   		</tr>
+ 		</th:block>
+		<!-- <tr th:each="product : ${map.key}">
+        	<td th:text="${product.pid}">1</td>
+       		<td><a href="#" th:text="${product.des}">Title ...</a></td>
+        	<td th:text="${product.price}">Text ...
+        	</td>
+    	</tr> -->
+	</table>
+</div>
+</body>
+</html>
